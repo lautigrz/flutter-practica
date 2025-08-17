@@ -81,14 +81,14 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(height: 25.0),
                 _textFieldPassword(),
                 SizedBox(height: 25.0),
-                _buttonLogin(),
+                _buttonLogin(context),
               ] else ...[
                 SizedBox(height: 25.0),
                 _textFieldEmail(),
                 SizedBox(height: 25.0),
                 _textFieldPassword(),
                 SizedBox(height: 25.0),
-                _buttonLogin(),
+                _buttonLogin(context),
               ],
             ],
           ),
@@ -98,7 +98,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 }
 
-Widget _buttonLogin() {
+Widget _buttonLogin(BuildContext context) {
   return Container(
     width: 240.0,
     height: 50.0,
@@ -108,7 +108,7 @@ Widget _buttonLogin() {
     ),
     child: TextButton(
       onPressed: () {
-        // Implement login functionality here
+        Navigator.pushNamed(context, 'home_page');
       },
       child: Text(
         "Iniciar Sesion",

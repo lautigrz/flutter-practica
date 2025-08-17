@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_practica/pages/login_page.dart';
+import 'package:login_practica/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
       initialRoute: LoginPage.id,
       routes: {
         LoginPage.id: (context) => LoginPage(),
-        // 'home_page': (context) => const MyHomePage(title: 'Home'), // 👈 otra pantalla
+        'home_page': (context) => const HomePage(title: 'Home prueba'),
       },
     );
   }
