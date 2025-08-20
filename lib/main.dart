@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_practica/pages/login_page.dart';
 import 'package:login_practica/pages/home_page.dart';
+import 'package:login_practica/pages/payment.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,10 +19,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      initialRoute: LoginPage.id,
+      initialRoute: PaymentPage.id,
       routes: {
         LoginPage.id: (context) => LoginPage(),
         'home_page': (context) => const HomePage(title: 'Home prueba'),
+        PaymentPage.id: (context) => PaymentPage(),
       },
     );
   }
